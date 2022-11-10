@@ -1,0 +1,53 @@
+## Para executar o banco de dados; 
+
+# Instalar docker e docker-compose 
+# Windows 
+ 
+ -- https://docs.docker.com/desktop/install/windows-install/
+
+# Linux 
+
+- sudo apt-get update 
+
+- sudo apt install docker.io 
+
+- sudo apt install docker-compose
+
+
+
+
+## Para executar o banco ;
+
+
+# Linux 
+
+ Estar na pasta do arquivo "docker-compose.yml" 
+
+ Executar o comando " sudo docker-compose up -d --build "
+
+ Após a execução o banco irá rodar em segundo plano localmente
+ para veririfcar se está funcionando executar o comando 
+ " sudo docker-compose ps " e sua saida deverá aparecer 
+
+Name           Command                             State         Ports                       
+ idoctor_db     docker - entrypoint.sh  mysqld      Up      0 . 0 . 0 . 0 : 3306->3306/tcp, : : : 3306 -> 3306 / tcp, 33060 / tcp
+
+
+# Windows 
+
+  Abrir o programa do Docker 
+  Setar o caminho da pasta no programa ( a pasta que contém o docker-compose.yml) 
+  ir na aba "IMAGES" 
+  Clicar em "RUN" em azul e novamente em " RUN "
+
+
+
+
+# Para conectar ao banco; 
+
+
+ ENDPOINT : 0.0.0.0:3306 
+ NOME DO BANCO: DB 
+ NOME DO USUÁRIO: idoctor-root 
+ SENHA : password1 ou password
+

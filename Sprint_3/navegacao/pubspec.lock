@@ -15,6 +15,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  calendar_view:
+    dependency: "direct main"
+    description:
+      name: calendar_view
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   characters:
     dependency: transitive
     description:
@@ -79,6 +86,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  ionicons:
+    dependency: "direct main"
+    description:
+      name: ionicons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   js:
     dependency: transitive
     description:

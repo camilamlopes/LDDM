@@ -7,15 +7,36 @@ class PerfilClinica extends StatelessWidget {
     return Scaffold(
       body: Stack(
             children: <Widget>[
-              Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children:[
-                  Text("aaaaa",
-                  style:TextStyle(
-                    color: Color.fromRGBO(2, 69, 122, 48),
-                  )) ,
-                ]
+              Container(
+                alignment: Alignment.topCenter,
+                margin: const EdgeInsets.only(bottom:400),
+                child: Center(
+                  child:Image.network("https://cdn.uso.com.br/12722/2020/03/112024729.jpg")
+                )
+              ),
+              Container(
+                  padding: EdgeInsets.only(top:30,left:15),
+                  child:ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.transparent,
+                        minimumSize: Size(100, 40),
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                        ),
+                      ),
+                      child: Icon(
+                        Ionicons.chevron_back,
+                        color: Colors.white,
+                      ),
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            //builder: (context) => CadastroPaciente()
+                          ),
+                        );
+                      }
+                  )
               ),
               Container(
                 color: Color.fromRGBO(0, 27, 72, 28),

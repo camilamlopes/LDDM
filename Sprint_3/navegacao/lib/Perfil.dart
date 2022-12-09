@@ -7,22 +7,45 @@ class Perfil extends StatelessWidget {
     return Scaffold(
       body: Stack(
             children: <Widget>[
-              Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children:[
-                  Text("aaaaa",
-                  style:TextStyle(
-                    color: Color.fromRGBO(2, 69, 122, 48),
-                  )) ,
-                ]
+              Container(
+                  padding: EdgeInsets.only(top:30,left:15),
+                  child:ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(0, 27, 72, 28),
+                        minimumSize: Size(100, 40),
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                        ),
+                      ),
+                      child: Icon(
+                        Ionicons.chevron_back,
+                        color: Colors.white,
+                      ),
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            //builder: (context) => CadastroPaciente()
+                          ),
+                        );
+                      }
+                  )
+              ),
+              Container(
+                  alignment: Alignment.topCenter,
+                  margin: const EdgeInsets.only(top:90,left: 15),
+                  height: 120,
+                  width : 120,
+                  child: Center(
+                      child:Image.network("https://i1.sndcdn.com/artworks-FRIqYPtESjPf6jwJ-mEXsUg-t500x500.jpg"),
+                  )
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:<Widget>[
                     Container(
-                      padding:EdgeInsets.only(top: 80,left:150),
+                      padding:EdgeInsets.only(top: 90,left:150),
                       child: Text("ENDOCRINOLOGIA",
                           style:TextStyle(
                             color: Color.fromRGBO(1, 138, 190, 75),

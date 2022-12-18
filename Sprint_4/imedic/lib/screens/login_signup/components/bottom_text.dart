@@ -45,13 +45,13 @@ class _BottomTextState extends State<BottomText> {
             TextButton(
               onPressed: () {
                 widget.tela == 'signup'
-                    ? Navigator.pop (
+                    ? Navigator.push (
                         context,
                         MaterialPageRoute (
-                          builder: (context) => LoginScreen()
+                          builder: (context) => SignupScreen()
                         ),
                       )
-                    : Navigator.pop (
+                    : Navigator.push (
                         context,
                         MaterialPageRoute(
                           builder: (context) => LoginScreen()

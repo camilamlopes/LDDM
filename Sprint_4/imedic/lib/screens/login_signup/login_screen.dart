@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../Utils/constants.dart';
+import '../../utils/constants.dart';
 import 'components/top_text.dart';
 import 'components/bottom_text.dart';
-
+import '../home/home.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -39,7 +39,12 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: const EdgeInsets.only(right: 30, left: 30, bottom: 10),
       child: ElevatedButton(
         onPressed: () {
-
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => HomeScreen()
+            ),
+          );
         },
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 15),
@@ -177,33 +182,33 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 100),
-            child: Stack(
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    inputField('E-mail'),
-                    const SizedBox(height: 8,),
-                    inputField('Senha'),
-                    forgotPassword(),
-                    mainButtom('Acessar'),
+              padding: const EdgeInsets.only(top: 100),
+              child: Stack(
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      inputField('E-mail'),
+                      const SizedBox(height: 8,),
+                      inputField('Senha'),
+                      forgotPassword(),
+                      mainButtom('Acessar'),
 
-                    divider(),
-                    logos(),
-                  ],
-                ),
-              ],
-            )
-        ),
-        const Align (
-          alignment: Alignment.bottomCenter,
-          child: Padding (
-            padding: EdgeInsets.only(bottom: 30),
-            child: BottomText(tela: 'login'),
+                      divider(),
+                      logos(),
+                    ],
+                  ),
+                ],
+              )
           ),
-        ),
+          const Align (
+            alignment: Alignment.bottomCenter,
+            child: Padding (
+              padding: EdgeInsets.only(bottom: 30),
+              child: BottomText(tela: 'login'),
+            ),
+          ),
         ],
       ),
 

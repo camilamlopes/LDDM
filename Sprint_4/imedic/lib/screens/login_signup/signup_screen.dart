@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../Utils/constants.dart';
+import '../../utils/constants.dart';
+import '../home/home.dart';
 import 'components/top_text.dart';
 import 'components/bottom_text.dart';
 
@@ -39,7 +40,12 @@ class _SignupScreenState extends State<SignupScreen> {
       padding: const EdgeInsets.only(right: 30, left: 30, bottom: 10),
       child: ElevatedButton(
         onPressed: () {
-
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => HomeScreen()
+            ),
+          );
         },
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 15),
@@ -167,43 +173,51 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
 
-    return Stack(
-      children: [
-        Positioned (
-          top: 100,
-          left: 24,
-          child: const TopText(tela: 'singup'),
-        ),
-
-        Padding(
-            padding: const EdgeInsets.only(top: 100),
-            child: Stack(
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    inputField('E-mail'),
-                    const SizedBox(height: 8,),
-                    inputField('Senha'),
-                    forgotPassword(),
-                    mainButtom('Acessar'),
-
-                    divider(),
-                    logos(),
-                  ],
-                ),
-              ],
-            )
-        ),
-        const Align (
-          alignment: Alignment.bottomCenter,
-          child: Padding (
-            padding: EdgeInsets.only(bottom: 30),
-            child: BottomText(tela: 'singup'),
+    return Scaffold (
+      body: ListView (
+        children: [
+          Padding (
+            padding: const EdgeInsets.only(top: 60, left: 25),
+            child: const TopText(tela: 'signup'),
           ),
-        ),
-      ],
+
+          Padding(
+              padding: const EdgeInsets.only(top: 50),
+              child: Stack(
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      inputField('Nome'),
+                      const SizedBox(height: 8,),
+                      inputField('Sobrenome'),
+                      const SizedBox(height: 8,),
+                      inputField('E-mail'),
+                      const SizedBox(height: 8,),
+                      inputField('Senha'),
+                      const SizedBox(height: 8,),
+                      inputField('CEP'),
+                      const SizedBox(height: 8,),
+                      inputField('Telefone'),
+                      const SizedBox(height: 30,),
+                      mainButtom('Cadastrar'),
+                      divider(),
+                      logos(),
+                    ],
+                  ),
+                ],
+              )
+          ),
+          const Align (
+            alignment: Alignment.bottomCenter,
+            child: Padding (
+              padding: EdgeInsets.only(bottom: 30),
+              child: BottomText(tela: 'signup'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

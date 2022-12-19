@@ -4,13 +4,17 @@ Trabalho para a matéria nominada como Laboratório de Desenvolvimento para Disp
 
 ## Participantes
 Camila M. Lopes
+
 Davi Braga
+
 Samir Cambraia 
 
 ### Front-End
 Camila M. Lopes
+
 Davi Braga
 
 ### Back-End
 Camila M. Lopes
+
 Samir Cambraia

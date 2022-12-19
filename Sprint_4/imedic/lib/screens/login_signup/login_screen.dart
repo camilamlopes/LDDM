@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../utils/constants.dart';
 import 'components/top_text.dart';
 import 'components/bottom_text.dart';
-import '../home/home.dart';
+import '../../controllers/navigator_controller.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => HomeScreen()
+                builder: (context) => NavigatorController()
             ),
           );
         },

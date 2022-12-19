@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:imedic/utils/constants.dart';
+import '../../../utils/constants.dart';
 
-import 'package:imedic/screens/login_signup/login_screen.dart';
-import 'package:imedic/screens/login_signup/signup_screen.dart';
+import '../login_screen.dart';
+import '../signup_screen.dart';
 
 class BottomText extends StatefulWidget {
   final String tela;
@@ -48,13 +48,13 @@ class _BottomTextState extends State<BottomText> {
                     ? Navigator.push (
                         context,
                         MaterialPageRoute (
-                          builder: (context) => SignupScreen()
+                          builder: (context) => LoginScreen()
                         ),
                       )
                     : Navigator.push (
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LoginScreen()
+                          builder: (context) => SignupScreen()
                         ),
                       );
               },

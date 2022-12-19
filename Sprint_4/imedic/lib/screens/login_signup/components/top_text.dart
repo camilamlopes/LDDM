@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'start_content.dart';
-
 
 class TopText extends StatefulWidget {
   final String tela;

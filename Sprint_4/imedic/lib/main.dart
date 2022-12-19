@@ -3,9 +3,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
-import 'utils/constants.dart';
 import 'screens/login_signup/start_screen.dart';
+import 'utils/constants.dart';
 
 Future<void> main() async{
   // WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home: StartScreen(),
+      home:StartScreen(),
     );
   }
 }

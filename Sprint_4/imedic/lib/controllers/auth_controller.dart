@@ -4,11 +4,12 @@ import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
 
 
-import 'package:imedic/screens/login_signup/start_screen.dart';
-import 'package:imedic/screens/home/home.dart';
+import '../screens/login_signup/start_screen.dart';
 
 import 'dart:ffi';
 import 'dart:html';
+
+import 'navigator_controller.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();
@@ -31,7 +32,7 @@ class AuthController extends GetxController {
       print("Login Page");
       Get.offAll(() => StartScreen());
     } else {
-      Get.offAll(() => HomeScreen());
+      Get.offAll(() => NavigatorController());
     }
   }
 

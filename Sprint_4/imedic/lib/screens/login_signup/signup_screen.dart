@@ -4,7 +4,7 @@ import '../../utils/constants.dart';
 import '../home/home.dart';
 import 'components/top_text.dart';
 import 'components/bottom_text.dart';
-
+import '../../controllers/navigator_controller.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
@@ -43,7 +43,7 @@ class _SignupScreenState extends State<SignupScreen> {
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => HomeScreen()
+                builder: (context) => NavigatorController()
             ),
           );
         },
